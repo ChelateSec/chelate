@@ -461,7 +461,7 @@ export async function generateMetadata({ params }) {
   }
 
   return {
-    title: \`\${post.title} | Chelate Blog\`,
+    title: `${post.title} | Chelate Blog`,
     description: post.content.substring(0, 160),
   }
 }
@@ -504,22 +504,22 @@ export default function BlogPost({ params }) {
             className="blog-content text-chelate-ink/90 leading-relaxed"
             dangerouslySetInnerHTML={{
               __html: post.content
-                .split('\\n')
+                .split('\n')
                 .map((line) => {
                   // Convert markdown-style headers
                   if (line.startsWith('# ')) {
-                    return \`<h1 class="text-4xl font-serif font-bold mt-12 mb-6 text-chelate-ink">\${line.substring(2)}</h1>\`
+                    return `<h1 class="text-4xl font-serif font-bold mt-12 mb-6 text-chelate-ink">${line.substring(2)}</h1>`
                   }
                   if (line.startsWith('## ')) {
-                    return \`<h2 class="text-3xl font-serif font-bold mt-10 mb-4 text-chelate-purple-700">\${line.substring(3)}</h2>\`
+                    return `<h2 class="text-3xl font-serif font-bold mt-10 mb-4 text-chelate-purple-700">${line.substring(3)}</h2>`
                   }
                   if (line.startsWith('### ')) {
-                    return \`<h3 class="text-2xl font-serif font-bold mt-8 mb-3 text-chelate-purple-600">\${line.substring(4)}</h3>\`
+                    return `<h3 class="text-2xl font-serif font-bold mt-8 mb-3 text-chelate-purple-600">${line.substring(4)}</h3>`
                   }
                   // Convert bold
                   line = line.replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-chelate-ink">$1</strong>')
                   // Convert inline code
-                  line = line.replace(/\`([^\`]+)\`/g, '<code class="bg-chelate-purple-100 text-chelate-purple-700 px-2 py-1 rounded font-mono text-sm">$1</code>')
+                  line = line.replace(/`([^`]+)`/g, '<code class="bg-chelate-purple-100 text-chelate-purple-700 px-2 py-1 rounded font-mono text-sm">$1</code>')
                   // Convert code blocks
                   if (line.startsWith('```')) {
                     return '<pre class="bg-chelate-purple-900 text-chelate-cream p-6 rounded-lg overflow-x-auto my-6"><code>'
@@ -529,7 +529,7 @@ export default function BlogPost({ params }) {
                   }
                   // Convert lists
                   if (line.startsWith('- ')) {
-                    return \`<li class="ml-6 mb-2">\${line.substring(2)}</li>\`
+                    return `<li class="ml-6 mb-2">${line.substring(2)}</li>`
                   }
                   // Convert horizontal rules
                   if (line === '---') {
@@ -537,11 +537,11 @@ export default function BlogPost({ params }) {
                   }
                   // Regular paragraphs
                   if (line.trim()) {
-                    return \`<p class="mb-4">\${line}</p>\`
+                    return `<p class="mb-4">${line}</p>`
                   }
                   return ''
                 })
-                .join('\\n'),
+                .join('\n'),
             }}
           />
         </div>

@@ -1,8 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap');
+@import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@theme {
+  --color-chelate-purple-50: #f5f3ff;
+  --color-chelate-purple-100: #ede9fe;
+  --color-chelate-purple-200: #ddd6fe;
+  --color-chelate-purple-300: #c4b5fd;
+  --color-chelate-purple-400: #a78bfa;
+  --color-chelate-purple-500: #8b5cf6;
+  --color-chelate-purple-600: #7c3aed;
+  --color-chelate-purple-700: #6d28d9;
+  --color-chelate-purple-800: #5b21b6;
+  --color-chelate-purple-900: #4c1d95;
+
+  --color-chelate-orange-50: #fff7ed;
+  --color-chelate-orange-100: #ffedd5;
+  --color-chelate-orange-200: #fed7aa;
+  --color-chelate-orange-300: #fdba74;
+  --color-chelate-orange-400: #fb923c;
+  --color-chelate-orange-500: #f97316;
+  --color-chelate-orange-600: #ea580c;
+  --color-chelate-orange-700: #c2410c;
+  --color-chelate-orange-800: #9a3412;
+  --color-chelate-orange-900: #7c2d12;
+
+  --color-chelate-cream: #fdf6e3;
+  --color-chelate-ink: #1a1208;
+
+  --font-family-serif: 'Instrument Serif', serif;
+  --font-family-mono: 'DM Mono', monospace;
+}
 
 @layer base {
   body {

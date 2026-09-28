@@ -8,7 +8,12 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "keywords": ["cicd", "security", "ai-agents", "github-actions"],
+  "keywords": [
+    "cicd",
+    "security",
+    "ai-agents",
+    "github-actions"
+  ],
   "author": "Chelate",
   "license": "MIT",
   "dependencies": {
@@ -21,6 +26,7 @@
     "react-dom": "^19.3.0"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
     "autoprefixer": "^10.6.1",
     "postcss": "^8.5.28",
     "tailwindcss": "^4.3.3"
