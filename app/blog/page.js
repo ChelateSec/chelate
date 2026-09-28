@@ -26,22 +26,22 @@ const blogPosts = [
 
 export default function BlogPage() {
   return (
-    <div className="bg-chelate-cream min-h-screen py-20">
+    <div className="bg-white min-h-screen py-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-16">
-          <h1 className="text-5xl font-serif font-bold text-chelate-ink mb-4">Blog</h1>
-          <p className="text-xl text-chelate-ink/80">
+        <div className="mb-12">
+          <h1 className="text-3xl font-semibold text-gray-900 mb-3">Blog</h1>
+          <p className="text-base text-gray-600">
             Insights on CI/CD security, AI agents, and supply chain protection.
           </p>
         </div>
 
-        <div className="space-y-12">
+        <div className="space-y-8">
           {blogPosts.map((post) => (
             <article
               key={post.slug}
-              className="bg-white rounded-lg p-8 border-2 border-chelate-purple-200 hover:border-chelate-purple-400 transition-all"
+              className="border border-gray-200 rounded-lg p-6 hover:border-gray-300 transition-all"
             >
-              <div className="text-sm text-chelate-ink/60 mb-2">
+              <div className="text-xs text-gray-500 mb-2">
                 {new Date(post.date).toLocaleDateString('en-US', {
                   year: 'numeric',
                   month: 'long',
@@ -49,16 +49,16 @@ export default function BlogPage() {
                 })}
               </div>
               <Link href={`/blog/${post.slug}`}>
-                <h2 className="text-3xl font-serif font-bold text-chelate-purple-700 mb-4 hover:text-chelate-purple-800 transition-colors">
+                <h2 className="text-xl font-semibold text-gray-900 mb-3 hover:text-primary-600 transition-colors">
                   {post.title}
                 </h2>
               </Link>
-              <p className="text-chelate-ink/80 mb-4 leading-relaxed">{post.excerpt}</p>
+              <p className="text-sm text-gray-600 mb-4 leading-relaxed">{post.excerpt}</p>
               <div className="flex items-center justify-between">
-                <span className="text-sm text-chelate-ink/60">By {post.author}</span>
+                <span className="text-xs text-gray-500">By {post.author}</span>
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="text-chelate-purple-600 hover:text-chelate-purple-700 font-medium"
+                  className="text-sm text-primary-600 hover:text-primary-700 font-medium"
                 >
                   Read more →
                 </Link>

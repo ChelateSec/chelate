@@ -474,70 +474,70 @@ export default function BlogPost({ params }) {
   }
 
   return (
-    <div className="bg-chelate-cream min-h-screen py-20">
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-8">
+    <div className="bg-white min-h-screen py-16">
+      <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-6">
           <Link
             href="/blog"
-            className="text-chelate-purple-600 hover:text-chelate-purple-700 mb-4 inline-block"
+            className="text-sm text-gray-600 hover:text-gray-900 mb-4 inline-block"
           >
             ← Back to Blog
           </Link>
         </div>
 
-        <header className="mb-12">
-          <div className="text-sm text-chelate-ink/60 mb-2">
+        <header className="mb-10">
+          <div className="text-xs text-gray-500 mb-2">
             {new Date(post.date).toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long',
               day: 'numeric',
             })}
           </div>
-          <h1 className="text-5xl font-serif font-bold text-chelate-ink mb-4">
+          <h1 className="text-3xl font-semibold text-gray-900 mb-3">
             {post.title}
           </h1>
-          <div className="text-chelate-ink/60">By {post.author}</div>
+          <div className="text-sm text-gray-600">By {post.author}</div>
         </header>
 
-        <div className="prose prose-lg max-w-none">
+        <div className="prose prose-sm max-w-none">
           <div
-            className="blog-content text-chelate-ink/90 leading-relaxed"
+            className="blog-content text-gray-700 leading-relaxed"
             dangerouslySetInnerHTML={{
               __html: post.content
                 .split('\n')
                 .map((line) => {
                   // Convert markdown-style headers
                   if (line.startsWith('# ')) {
-                    return `<h1 class="text-4xl font-serif font-bold mt-12 mb-6 text-chelate-ink">${line.substring(2)}</h1>`
+                    return `<h1 class="text-2xl font-semibold mt-10 mb-5 text-gray-900">${line.substring(2)}</h1>`
                   }
                   if (line.startsWith('## ')) {
-                    return `<h2 class="text-3xl font-serif font-bold mt-10 mb-4 text-chelate-purple-700">${line.substring(3)}</h2>`
+                    return `<h2 class="text-xl font-semibold mt-8 mb-4 text-gray-900">${line.substring(3)}</h2>`
                   }
                   if (line.startsWith('### ')) {
-                    return `<h3 class="text-2xl font-serif font-bold mt-8 mb-3 text-chelate-purple-600">${line.substring(4)}</h3>`
+                    return `<h3 class="text-lg font-semibold mt-6 mb-3 text-gray-900">${line.substring(4)}</h3>`
                   }
                   // Convert bold
-                  line = line.replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-chelate-ink">$1</strong>')
+                  line = line.replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-gray-900">$1</strong>')
                   // Convert inline code
-                  line = line.replace(/`([^`]+)`/g, '<code class="bg-chelate-purple-100 text-chelate-purple-700 px-2 py-1 rounded font-mono text-sm">$1</code>')
+                  line = line.replace(/`([^`]+)`/g, '<code class="bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded font-mono text-xs">$1</code>')
                   // Convert code blocks
                   if (line.startsWith('```')) {
-                    return '<pre class="bg-chelate-purple-900 text-chelate-cream p-6 rounded-lg overflow-x-auto my-6"><code>'
+                    return '<pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-4 text-xs"><code>'
                   }
                   if (line === '```') {
                     return '</code></pre>'
                   }
                   // Convert lists
                   if (line.startsWith('- ')) {
-                    return `<li class="ml-6 mb-2">${line.substring(2)}</li>`
+                    return `<li class="ml-5 mb-2 text-sm">${line.substring(2)}</li>`
                   }
                   // Convert horizontal rules
                   if (line === '---') {
-                    return '<hr class="my-8 border-chelate-purple-200" />'
+                    return '<hr class="my-6 border-gray-200" />'
                   }
                   // Regular paragraphs
                   if (line.trim()) {
-                    return `<p class="mb-4">${line}</p>`
+                    return `<p class="mb-4 text-sm">${line}</p>`
                   }
                   return ''
                 })
@@ -546,10 +546,10 @@ export default function BlogPost({ params }) {
           />
         </div>
 
-        <div className="mt-12 pt-8 border-t border-chelate-purple-200">
+        <div className="mt-10 pt-6 border-t border-gray-200">
           <Link
             href="/blog"
-            className="text-chelate-purple-600 hover:text-chelate-purple-700 font-medium"
+            className="text-sm text-primary-600 hover:text-primary-700 font-medium"
           >
             ← Back to all posts
           </Link>
