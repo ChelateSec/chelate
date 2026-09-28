@@ -1,0 +1,28 @@
+{
+  "name": "chelate",
+  "version": "0.1.0",
+  "description": "Secure your AI agents in CI/CD",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "keywords": ["cicd", "security", "ai-agents", "github-actions"],
+  "author": "Chelate",
+  "license": "MIT",
+  "dependencies": {
+    "@mdx-js/loader": "^3.1.1",
+    "@mdx-js/react": "^3.1.1",
+    "@next/mdx": "^16.3.6",
+    "@types/mdx": "^2.0.14",
+    "next": "^16.3.6",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.6.1",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^4.3.3"
+  }
+}
