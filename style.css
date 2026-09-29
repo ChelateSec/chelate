@@ -33,7 +33,7 @@ header {
   -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--border);
 }
 .header-inner {
-  max-width: 1200px; margin: 0 auto; padding: 0 2rem;
+  max-width: 1400px; margin: 0 auto; padding: 0 4rem;
   height: 60px; display: flex; align-items: center; justify-content: space-between;
 }
 .logo {
@@ -70,8 +70,8 @@ nav a:hover { color: var(--purple); }
 /* HERO */
 .hero {
   min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr;
-  align-items: center; max-width: 1200px; margin: 0 auto;
-  padding: 7rem 2rem 4rem; gap: 3rem;
+  align-items: center; max-width: 1400px; margin: 0 auto;
+  padding: 7rem 4rem 4rem; gap: 4rem;
 }
 .hero-tag {
   font-family: 'DM Mono', monospace; font-size: 0.7rem;
@@ -109,7 +109,7 @@ nav a:hover { color: var(--purple); }
 .code-line.detail { color: rgba(253,246,227,0.5); margin-left: 1rem; }
 
 /* SECTIONS */
-.section { max-width: 1200px; margin: 0 auto; padding: 6rem 2rem; }
+.section { max-width: 1400px; margin: 0 auto; padding: 6rem 4rem; }
 .section-label {
   font-family: 'DM Mono', monospace; font-size: 0.68rem;
   letter-spacing: 0.14em; text-transform: uppercase;
@@ -126,10 +126,10 @@ nav a:hover { color: var(--purple); }
 /* PROBLEM GRID */
 .problem-grid {
   display: grid; grid-template-columns: 1fr 1fr;
-  gap: 2rem; margin-top: 3rem;
+  gap: 2.5rem; margin-top: 3rem;
 }
 .problem-card {
-  border: 1px solid var(--border); padding: 2rem;
+  border: 1px solid var(--border); padding: 2.5rem;
   background: var(--cream);
 }
 .problem-card h3 {
@@ -144,10 +144,10 @@ nav a:hover { color: var(--purple); }
 .feature-section { background: var(--cream-dark); }
 .feature-grid {
   display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 2rem; margin-top: 3rem;
+  gap: 2.5rem; margin-top: 3rem;
 }
 .feature-card {
-  border: 1px solid var(--border); padding: 2rem;
+  border: 1px solid var(--border); padding: 2.5rem;
   background: var(--cream);
 }
 .feature-card h3 {
@@ -165,11 +165,11 @@ nav a:hover { color: var(--purple); }
 .dark-section .section-title em { color: #c8a0e8; }
 .commands-grid {
   display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 2rem; margin-top: 3rem;
+  gap: 2.5rem; margin-top: 3rem;
 }
 .command-card {
   border: 1px solid rgba(255,255,255,0.12);
-  padding: 2rem; background: rgba(255,255,255,0.03);
+  padding: 2.5rem; background: rgba(255,255,255,0.03);
 }
 .command-name {
   font-family: 'DM Mono', monospace; font-size: 0.82rem;
@@ -187,10 +187,10 @@ nav a:hover { color: var(--purple); }
 .pricing-section { background: var(--cream-dark); }
 .pricing-grid {
   display: grid; grid-template-columns: 1fr 1fr;
-  gap: 2rem; margin-top: 3rem;
+  gap: 2.5rem; margin-top: 3rem;
 }
 .pricing-card {
-  border: 1px solid var(--border); padding: 2.5rem;
+  border: 1px solid var(--border); padding: 3rem;
   background: var(--cream);
 }
 .pricing-card.featured {
@@ -234,9 +234,9 @@ nav a:hover { color: var(--purple); }
 
 /* FOOTER */
 footer {
-  border-top: 1px solid var(--border); padding: 2rem;
+  border-top: 1px solid var(--border); padding: 2rem 4rem;
   display: flex; justify-content: space-between; align-items: center;
-  max-width: 1200px; margin: 0 auto;
+  max-width: 1400px; margin: 0 auto;
 }
 footer p { font-size: 0.74rem; color: var(--gray-text); }
 .footer-links { display: flex; gap: 1.5rem; }
@@ -353,11 +353,49 @@ footer p { font-size: 0.74rem; color: var(--gray-text); }
 }
 
 /* RESPONSIVE */
+@media (max-width: 1200px) {
+  .header-inner { padding: 0 2rem; }
+  .hero { padding: 7rem 2rem 4rem; gap: 3rem; }
+  .section { padding: 5rem 2rem; }
+  footer { padding: 2rem; }
+}
+
 @media (max-width: 968px) {
-  .hero { grid-template-columns: 1fr; gap: 2rem; }
-  .problem-grid { grid-template-columns: 1fr; }
-  .feature-grid { grid-template-columns: 1fr; }
-  .commands-grid { grid-template-columns: 1fr; }
-  .pricing-grid { grid-template-columns: 1fr; }
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    min-height: auto;
+    padding: 6rem 1.5rem 3rem;
+  }
+  .hero-title { font-size: 2.2rem; }
+  .problem-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .feature-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .commands-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .pricing-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .section { padding: 4rem 1.5rem; }
+  .header-inner { padding: 0 1.5rem; }
+  footer {
+    padding: 1.5rem;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
   nav { display: none; }
+}
+
+@media (max-width: 640px) {
+  .hero { padding: 5rem 1rem 2rem; }
+  .hero-title { font-size: 1.8rem; }
+  .hero-sub { font-size: 0.85rem; }
+  .section { padding: 3rem 1rem; }
+  .section-title { font-size: 1.6rem; }
+  .header-inner { padding: 0 1rem; }
+  .logo { font-size: 1.1rem; }
+  .problem-card, .feature-card, .command-card, .pricing-card {
+    padding: 1.5rem;
+  }
+  .code-demo { padding: 1rem; font-size: 0.72rem; }
+  .install-box { padding: 1.5rem; }
+  .install-box pre { font-size: 0.75rem; }
+  footer { padding: 1rem; }
 }
