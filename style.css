@@ -1,14 +1,14 @@
 :root {
-  --cream: #fffbf5;
-  --cream-dark: #fff3e0;
-  --ink: #1a1a1a;
-  --ink-mid: #4a4a4a;
-  --purple: #ff6b35;
-  --purple-light: #ff8c61;
-  --purple-pale: #ffe8df;
-  --orange: #fbbf24;
-  --gray-text: #6b6b6b;
-  --border: rgba(255,107,53,0.15);
+  --cream: #FDF6EF;
+  --cream-dark: #f5ebe0;
+  --ink: #1C2826;
+  --ink-mid: #2D4A43;
+  --purple: #2D4A43;
+  --purple-light: #3d5f56;
+  --purple-pale: #e8f0ed;
+  --orange: #D87355;
+  --gray-text: #5a6965;
+  --border: rgba(45,74,67,0.15);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -296,12 +296,12 @@ footer p { font-size: 0.74rem; color: var(--gray-text); }
 
 .problem-card:hover, .feature-card:hover, .command-card:hover, .pricing-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(255,107,53,0.12);
+  box-shadow: 0 8px 24px rgba(45,74,67,0.12);
 }
 
 .blog-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(255,107,53,0.1);
+  box-shadow: 0 4px 16px rgba(45,74,67,0.1);
 }
 
 .btn-primary, .btn-ghost {
